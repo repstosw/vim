@@ -37,11 +37,12 @@ hi SpecialKey                                                           guifg=#4
 hi StatusLine           gui=none    guibg=#007090   guifg=#E0FFFF
 hi StatusLineNC     gui=none    guibg=#003545 guifg=#909090
 hi Title                                                                    guifg=#ffffff
-hi Visual                   gui=none    guibg=#3a9b9b   guifg=#505050
+hi Visual                   gui=none    guibg=#3a9b9b   guifg=#202020
 hi WarningMsg                               guifg=#ffff00
 hi CursorLine   gui=underline   guibg=#303040
 hi CursorLineNr gui=bold guibg=#007090   guifg=#FFFFFF
 hi VertSplit    guibg=#FFFFFF   guifg=#006545
+hi Pmenu        gui=bold guibg=#2A3396 guifg=#FFFFFF
 "
 " syntax highlighting groups ----------------------------------------
 

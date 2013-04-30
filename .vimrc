@@ -1,17 +1,19 @@
 " Load Pathogen
 filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+execute pathogen#infect()
+execute pathogen#helptags()
 
 set history=700
 
 colorscheme banks
+filetype on
+syntax on
 filetype plugin on
 filetype indent on
 
 set autoread
-set guioptions=aegimt
-set guifont=Ubuntu\ Mono\ 11
+set guioptions=agimt
+set guifont=Liberation\ Mono\ 10
 
 set scrolloff=15
 set wildmenu
@@ -37,11 +39,22 @@ set wrap
 nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
 
 autocmd BufNewFile,BufRead *.wsgi set filetype=python
-autocmd FileType python set complete+=k~/.vim/syntax/python.vim isk+=.,(
+
+" SuperTab stuff
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+let g:SuperTabDefaultCompletionType = "context"
+set completeopt=menuone,longest,preview
+
 map <F7> :w<CR>:!python % <CR>
 map <F10> :shell <CR>
 
-noremap <F4> :set hlsearch! hlsearch?<CR>
+" NERDTree
+map <leader>n :NERDTreeToggle<CR>
+
+" PEP8
+let g:pep8_map='<leader>8'
+
+"noremap <F4> :set hlsearch! hlsearch?<CR>
 
 " map window navigation
 map <c-j> <c-w>j
