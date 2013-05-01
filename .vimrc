@@ -49,7 +49,11 @@ map <F7> :w<CR>:!python % <CR>
 map <F10> :shell <CR>
 
 " NERDTree
-map <leader>n :NERDTreeToggle<CR>
+map <silent><leader>n :NERDTreeToggle<CR>
+
+" minibufexplorer
+map <silent><leader>b :TMiniBufExplorer<CR>
+let g:miniBufExplMapWindowNavVim = 1
 
 " PEP8
 let g:pep8_map='<leader>8'

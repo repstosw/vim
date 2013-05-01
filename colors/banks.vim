@@ -42,7 +42,8 @@ hi WarningMsg                               guifg=#ffff00
 hi CursorLine   gui=underline   guibg=#303040
 hi CursorLineNr gui=bold guibg=#007090   guifg=#FFFFFF
 hi VertSplit    guibg=#FFFFFF   guifg=#006545
-hi Pmenu        gui=bold guibg=#2A3396 guifg=#FFFFFF
+hi Pmenu        guibg=#1A2386 guifg=#AAFFAA
+hi PmenuSel     gui=bold guibg=#4053B6 guifg=#FFFFFF
 "
 " syntax highlighting groups ----------------------------------------
 
