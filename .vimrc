@@ -13,7 +13,7 @@ filetype indent on
 
 set autoread
 set guioptions=agimt
-set guifont=Liberation\ Mono\ 10
+set guifont=Liberation\ Mono\ 9
 
 set scrolloff=15
 set wildmenu
@@ -24,6 +24,7 @@ set cmdheight=2
 set hid
 set relativenumber
 set cursorline
+set cursorcolumn
 
 set backspace=eol,start,indent
 set whichwrap+=<,>,h
@@ -39,6 +40,12 @@ set wrap
 nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
 
 autocmd BufNewFile,BufRead *.wsgi set filetype=python
+autocmd BufNewFile,BufRead *.py call SetOverLength()
+
+fun! SetOverLength()
+    match OverLength /\%80v.*/
+    execute "set colorcolumn=" . join(range(80,100),',')
+endfun
 
 " SuperTab stuff
 autocmd FileType python set omnifunc=pythoncomplete#Complete
@@ -58,7 +65,10 @@ let g:miniBufExplMapWindowNavVim = 1
 " PEP8
 let g:pep8_map='<leader>8'
 
-"noremap <F4> :set hlsearch! hlsearch?<CR>
+" Column limits
+execute "set colorcolumn=" . join(range(80,334),',')
+
+noremap <F4> :set hlsearch! hlsearch?<CR>
 
 " map window navigation
 map <c-j> <c-w>j
@@ -70,4 +80,16 @@ map <c-h> <c-w>h
 imap jj <Esc>
 
 set statusline=\ %n\ -\ %f\ %m%r%=[%l/%L,%c]\ \ %p\%%
+
+"fun! CheckMBE()
+"    if &ft =~ 'minibufexpl'
+"        return
+"    endif
+"    match OverLength /\%80v.*/
+"endfun
+
+
+"augroup vimrc_autocmds
+"    autocmd BufEnter * call CheckMBE() 
+"augroup END
 

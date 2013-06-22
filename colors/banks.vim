@@ -18,8 +18,8 @@ let g:colors_name="banks"
 
 "--------------------------------------------------------------------
 
-hi Normal                   gui=none    guibg=#101020   guifg=#bbbbbb
-hi Cursor                                       guibg=#44ff44 guifg=#000000
+hi Normal                   gui=none    guibg=#082540   guifg=#bbbbbb
+hi Cursor                                       guibg=#34ff44 guifg=#000000
 hi Directory                                                            guifg=#44ffff
 hi DiffAdd                                  guibg=#080808   guifg=#ffff00
 hi DiffDelete                               guibg=#080808   guifg=#444444
@@ -31,7 +31,7 @@ hi IncSearch                                guibg=#000000   guifg=#bbcccc
 hi LineNr                                       guibg=#003545   guifg=#E0FFFF
 hi ModeMsg                                                              guifg=#ffffff
 hi MoreMsg                                                              guifg=#44ff44
-hi NonText                                                              guifg=#4444ff
+hi NonText      guibg=#151525   guifg=#4444ff
 hi Question                                                             guifg=#ffff00
 hi SpecialKey                                                           guifg=#4444ff
 hi StatusLine           gui=none    guibg=#007090   guifg=#E0FFFF
@@ -39,11 +39,16 @@ hi StatusLineNC     gui=none    guibg=#003545 guifg=#909090
 hi Title                                                                    guifg=#ffffff
 hi Visual                   gui=none    guibg=#3a9b9b   guifg=#202020
 hi WarningMsg                               guifg=#ffff00
-hi CursorLine   gui=underline   guibg=#303040
-hi CursorLineNr gui=bold guibg=#007090   guifg=#FFFFFF
+hi CursorLine   gui=underline   guibg=#124676
+hi CursorLineNr gui=bold guibg=#907090   guifg=#FFFFFF
+hi CursorColumn guibg=#183550
 hi VertSplit    guibg=#FFFFFF   guifg=#006545
 hi Pmenu        guibg=#1A2386 guifg=#AAFFAA
 hi PmenuSel     gui=bold guibg=#4053B6 guifg=#FFFFFF
+hi ColorColumn  guibg=#151525
+hi OverLength   guifg=#A00000
+
+"
 "
 " syntax highlighting groups ----------------------------------------
 
