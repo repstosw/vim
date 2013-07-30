@@ -5,7 +5,7 @@ execute pathogen#helptags()
 
 set history=700
 
-colorscheme banks
+colorscheme molokai
 filetype on
 syntax on
 filetype plugin on
@@ -13,7 +13,7 @@ filetype indent on
 
 set autoread
 set guioptions=agimt
-set guifont=Liberation\ Mono\ 9
+set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 10
 
 set scrolloff=15
 set wildmenu
@@ -36,14 +36,16 @@ set expandtab
 
 set wrap
 
+"let g:syntastic_python_checkers=['pyflakes']
 " set number
 nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
 
+hi colorcolumn guifg=DarkRed guibg=Black
 autocmd BufNewFile,BufRead *.wsgi set filetype=python
 autocmd BufNewFile,BufRead *.py call SetOverLength()
 
 fun! SetOverLength()
-    match OverLength /\%80v.*/
+    "match OverLength /\%80v.*/
     execute "set colorcolumn=" . join(range(80,100),',')
 endfun
 
@@ -51,6 +53,9 @@ endfun
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
 set completeopt=menuone,longest,preview
+
+" Powerline
+set rtp+=.vim/bundle/powerline/powerline/bindings/vim
 
 map <F7> :w<CR>:!python % <CR>
 map <F10> :shell <CR>
@@ -80,16 +85,4 @@ map <c-h> <c-w>h
 imap jj <Esc>
 
 set statusline=\ %n\ -\ %f\ %m%r%=[%l/%L,%c]\ \ %p\%%
-
-"fun! CheckMBE()
-"    if &ft =~ 'minibufexpl'
-"        return
-"    endif
-"    match OverLength /\%80v.*/
-"endfun
-
-
-"augroup vimrc_autocmds
-"    autocmd BufEnter * call CheckMBE() 
-"augroup END
 
