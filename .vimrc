@@ -67,6 +67,11 @@ map <silent><leader>n :NERDTreeToggle<CR>
 map <silent><leader>b :TMiniBufExplorer<CR>
 let g:miniBufExplMapWindowNavVim = 1
 
+" indent guides
+let g:indent_guides_color_change_percent = 2
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
+
 " PEP8
 let g:pep8_map='<leader>8'
 
@@ -84,5 +89,5 @@ map <c-h> <c-w>h
 
 imap jj <Esc>
 
-set statusline=\ %n\ -\ %f\ %m%r%=[%l/%L,%c]\ \ %p\%%
+"set statusline=\ %n\ -\ %f\ %m%r%=[%l/%L,%c]\ \ %p\%%
 
