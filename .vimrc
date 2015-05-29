@@ -76,7 +76,7 @@ let g:indent_guides_start_level = 2
 let g:pep8_map='<leader>8'
 
 " Column limits
-execute "set colorcolumn=" . join(range(80,334),',')
+" execute "set colorcolumn=" . join(range(80,334),',')
 
 noremap <F4> :set hlsearch! hlsearch?<CR>
 
@@ -89,5 +89,5 @@ map <c-h> <c-w>h
 
 imap jj <Esc>
 
-"set statusline=\ %n\ -\ %f\ %m%r%=[%l/%L,%c]\ \ %p\%%
+" set statusline=\ %n\ -\ %f\ %m%r%=[%l/%L,%c]\ \ %p\%%
 
