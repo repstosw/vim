@@ -14,6 +14,7 @@ filetype indent on
 set autoread
 set guioptions=agimt
 set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 10
+set title
 
 set scrolloff=15
 set wildmenu
